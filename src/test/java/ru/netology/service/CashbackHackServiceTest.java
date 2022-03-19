@@ -16,6 +16,7 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldCalculateRemainIfOverBoundary() {
         CashbackHackService service = new CashbackHackService();
@@ -26,6 +27,7 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldCalculateRemainIfNotAmount() {
         CashbackHackService service = new CashbackHackService();
@@ -36,6 +38,7 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldCalculateRemainIfMultiplyAmount() {
         CashbackHackService service = new CashbackHackService();
