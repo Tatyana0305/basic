@@ -7,7 +7,7 @@ import static org.testng.AssertJUnit.assertEquals;
 public class CashbackHackServiceTest {
 
     @Test
-    void shouldCalculateRemainIfUnderBoundary() {
+    public void shouldCalculateRemainIfUnderBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 800;
 
@@ -16,8 +16,9 @@ public class CashbackHackServiceTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
-    void shouldCalculateRemainIfOverBoundary() {
+    public void shouldCalculateRemainIfOverBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1800;
 
@@ -26,8 +27,9 @@ public class CashbackHackServiceTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
-    void shouldCalculateRemainIfNotAmount() {
+    public void shouldCalculateRemainIfNotAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
 
