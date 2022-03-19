@@ -1,10 +1,10 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.AssertJUnit.assertEquals;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @Test
     void shouldCalculateRemainIfUnderBoundary() {
@@ -14,7 +14,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 200;
 
-        assertEquals(expected, actual, "wrong remain");
+        assertEquals(actual, expected);
     }
     @Test
     void shouldCalculateRemainIfOverBoundary() {
@@ -24,7 +24,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 200;
 
-        assertEquals(expected, actual, "wrong remain");
+        assertEquals(actual, expected);
     }
     @Test
     void shouldCalculateRemainIfNotAmount() {
@@ -34,7 +34,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(expected, actual, "wrong remain");
+        assertEquals(actual, expected);
     }
 
 }
