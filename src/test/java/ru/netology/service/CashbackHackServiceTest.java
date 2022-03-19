@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CashbackHackServiceTest {
 
     @Test
-    void shouldCalculateRemainIfUnderBoundary() {
+    public void shouldCalculateRemainIfUnderBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 800;
 
@@ -17,7 +17,7 @@ class CashbackHackServiceTest {
         assertEquals(expected, actual, "wrong remain");
     }
     @Test
-    void shouldCalculateRemainIfOverBoundary() {
+    public void shouldCalculateRemainIfOverBoundary() {
         CashbackHackService service = new CashbackHackService();
         int amount = 1800;
 
@@ -27,7 +27,7 @@ class CashbackHackServiceTest {
         assertEquals(expected, actual, "wrong remain");
     }
     @Test
-    void shouldCalculateRemainIfNotAmount() {
+    public void shouldCalculateRemainIfNotAmount() {
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
 
@@ -35,6 +35,16 @@ class CashbackHackServiceTest {
         int expected = 1000;
 
         assertEquals(expected, actual, "wrong remain");
+    }
+    @Test
+    public void shouldCalculateRemainIfMultiplyAmount() {
+        CashbackHackService service = new CashbackHackService();
+        int amount = 1000;
+
+        int actual = service.remain(amount);
+        int expected = 0;
+
+        assertEquals(expected, actual);
     }
 
 }
